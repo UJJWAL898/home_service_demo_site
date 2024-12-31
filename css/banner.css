@@ -1,0 +1,171 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+.banner-container {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #E8B736;
+}
+
+/* Services Section */
+.services-section {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.services-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.services-section h2 {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 2em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  max-width: 450px;
+}
+
+.form-container {
+  background: rgb(228, 227, 227);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 60px;
+  resize: vertical;
+}
+
+.recaptcha {
+  margin: 0.2rem 0;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .banner-container {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .services-section {
+    padding-right: 0;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-container {
+    flex-direction: column; /* Ensure services and form are stacked */
+    padding: 1rem;
+  }
+
+  .services-section {
+    width: 100%; /* Full width for the services section */
+    padding-right: 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for services */
+  }
+
+  .form-section {
+    width: 100%; /* Full width for the form section */
+    margin-top: 1.5rem; /* Add space below the services section */
+  }
+}

@@ -33,6 +33,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
+     <link rel="stylesheet" href="css/banner.css">
     <link href="css/style.css" rel="stylesheet" />
 
     <!-- Bootstrap CDN -->
@@ -146,8 +147,70 @@
     </div>
     <!-- Nav Bar End -->
 
+
+
+    <div id="app">
+      <div class="banner-container">
+        <!-- Services Section -->
+        <div class="services-section">
+          <h1>Save Smart Home services at your doorstep</h1>
+          <h2>What are you looking for?</h2>
+          
+          <div class="services-grid">
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/sofa.png" alt="Sofa">
+              <p>Sofa & Carpet Cleaning</p>
+            </div>
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/bathroom.png" alt="Bathroom">
+              <p>Bathroom & Kitchen Cleaning</p>
+            </div>
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/house.png" alt="House">
+              <p>Full Home Cleaning</p>
+            </div>
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/office.png" alt="Office">
+              <p>Office Deep Cleaning</p>
+            </div>
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/broom.png" alt="AMC">
+              <p>AMC Cleaning Package</p>
+            </div>
+            <div class="service-item">
+              <img src="https://img.icons8.com/ios/100/000000/housekeeping.png" alt="Housekeeping">
+              <p>Housekeeping Manpower and Payroll Services</p>
+            </div>
+           
+           
+          </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="form-section">
+          <div class="form-container">
+            <h2>Fill This Form We Will Call You</h2>
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="tel" placeholder="Phone" required>
+              <textarea placeholder="Your Message" required></textarea>
+              <div class="recaptcha">
+                <!-- Placeholder for reCAPTCHA -->
+                <div class="checkbox">
+                  <input type="checkbox" required>
+                  <label>I'm not a robot</label>
+                </div>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Carousel Start -->
-    <div class="carousel">
+    <!-- <div class="carousel">
       <div class="container-fluid">
         <div class="owl-carousel">
           <div class="carousel-item">
@@ -194,7 +257,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Carousel End -->
 
     <!-- About Start -->
@@ -858,6 +921,7 @@
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
+     <script src="js/counter.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
