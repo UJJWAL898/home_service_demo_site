@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   gap: 2rem;
-  background-image: url("/img/newbanner.jpg"); /* Replace with your actual image URL */
+  background-image: url("/img/bannerbg.jpg"); /* Replace with your actual image URL */
   background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@
 .services-section {
   flex: 1;
   padding-right: 2rem;
-  padding-top: 3rem ;
+  padding-top: 2rem ;
 }
 
 .services-section h1 {
@@ -59,6 +59,7 @@
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .service-item:hover {
@@ -94,6 +95,7 @@
   text-align: center;
   margin-bottom: 2rem;
   color: #333;
+  font-size: 30px;
 }
 
 form {

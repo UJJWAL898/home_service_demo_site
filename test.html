@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Effect with Line Break</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .banner_heading {
+        font-size: 2rem;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+      }
+      .line {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .line .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.2em;
+        background-color: #333;
+        animation: blink 0.5s step-end infinite;
+      }
+      @keyframes blink {
+        from,
+        to {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="banner_heading text-uppercase">
+      <span class="line" id="line1"></span><span class="cursor" id="cursor1"></span>
+      <span class="line" id="line2"></span><span class="cursor" id="cursor2"></span>
+    </h1>
+
+    <script>
+      const line1Text = "From Your Couch to Your Car,";
+      const line2Text = "We Clean It All with Care!";
+      const line1 = document.getElementById("line1");
+      const line2 = document.getElementById("line2");
+      const cursor1 = document.getElementById("cursor1");
+      const cursor2 = document.getElementById("cursor2");
+
+      let index1 = 0,
+        index2 = 0;
+
+      function typeEffect() {
+        if (index1 < line1Text.length) {
+          // Typing the first line
+          line1.textContent = line1Text.slice(0, index1 + 1);
+          cursor1.style.display = "inline-block"; // Show cursor for line 1
+          cursor2.style.display = "none"; // Hide cursor for line 2
+          index1++;
+          setTimeout(typeEffect, 100); // Continue typing first line
+        } else if (index2 < line2Text.length) {
+          // Typing the second line
+          line2.textContent = line2Text.slice(0, index2 + 1);
+          cursor1.style.display = "none"; // Hide cursor for line 1
+          cursor2.style.display = "inline-block"; // Show cursor for line 2
+          index2++;
+          setTimeout(typeEffect, 100); // Continue typing second line
+        } else {
+          // Restart the animation after a pause
+          setTimeout(() => {
+            index1 = 0;
+            index2 = 0;
+            line1.textContent = "";
+            line2.textContent = "";
+            cursor1.style.display = "inline-block"; // Reset cursor for line 1
+            cursor2.style.display = "none"; // Hide cursor for line 2
+            typeEffect(); // Restart typing effect
+          }, 2000); // Pause before restarting
+        }
+      }
+
+      // Start the typing effect
+      typeEffect();
+    </script>
+  </body>
+</html>
