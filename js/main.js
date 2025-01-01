@@ -129,3 +129,53 @@
 })(jQuery);
 
 
+
+const images = [
+  "img/IMG-20250101-WA0023.jpg",
+  "img/IMG-20250101-WA0025.jpg",
+  "https://source.unsplash.com/800x600/?home-repair",
+  "https://source.unsplash.com/800x600/?painting",
+  "https://source.unsplash.com/800x600/?plumbing",
+  "https://source.unsplash.com/800x600/?electrical",
+];
+
+let currentSlide = 0;
+const slider = document.getElementById("fullscreen-slider");
+const sliderImage = document.getElementById("slider-image");
+
+function openSlider(index) {
+  currentSlide = index;
+  slider.style.display = "block";
+  updateSliderImage();
+  document.body.style.overflow = "hidden";
+}
+
+function closeSlider() {
+  slider.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+function changeSlide(direction) {
+  currentSlide = (currentSlide + direction + images.length) % images.length;
+  updateSliderImage();
+}
+
+function updateSliderImage() {
+  sliderImage.src = images[currentSlide];
+}
+
+// Close slider when clicking outside the image
+slider.addEventListener("click", (e) => {
+  if (e.target === slider) {
+    closeSlider();
+  }
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (slider.style.display === "block") {
+    if (e.key === "Escape") closeSlider();
+    if (e.key === "ArrowLeft") changeSlide(-1);
+    if (e.key === "ArrowRight") changeSlide(1);
+  }
+});

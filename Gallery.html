@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
         
         <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
@@ -129,6 +130,54 @@
             </div>
         </div>
         <!-- Page Header End -->
+
+
+
+<!-- Gallery Grid -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Our Services Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openSlider(0)">
+                <img src="img/IMG-20250101-WA0023.jpg" alt="Service 1">
+            </div>
+            <div class="gallery-item" onclick="openSlider(1)">
+                <img src="img/IMG-20250101-WA0025.jpg" alt="Service 2">
+            </div>
+            <div class="gallery-item" onclick="openSlider(2)">
+                <img src="https://source.unsplash.com/800x600/?home-repair" alt="Service 3">
+            </div>
+            <div class="gallery-item" onclick="openSlider(3)">
+                <img src="https://source.unsplash.com/800x600/?painting" alt="Service 4">
+            </div>
+            <div class="gallery-item" onclick="openSlider(4)">
+                <img src="https://source.unsplash.com/800x600/?plumbing" alt="Service 5">
+            </div>
+            <div class="gallery-item" onclick="openSlider(5)">
+                <img src="https://source.unsplash.com/800x600/?electrical" alt="Service 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Slider -->
+    <div id="fullscreen-slider" class="fullscreen-slider">
+        <button class="close-btn" onclick="closeSlider()">&times;</button>
+        <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="slider-content">
+            <img id="slider-image" src="" alt="Slider Image">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Gallery Preview Section Start -->
         <div class="gallery-preview">
