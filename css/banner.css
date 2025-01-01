@@ -1,40 +1,49 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #213547;
-  background-color: #ffffff;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
 .banner-container {
   display: flex;
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   gap: 2rem;
-  background-color: #E8B736;
+  background-image: url("/img/newbanner.jpg"); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
+  z-index: 0;
+}
+
+.banner-container > * {
+  position: relative;
+  z-index: 1; /* Ensures the content appears above the overlay */
 }
 
 /* Services Section */
 .services-section {
   flex: 1;
   padding-right: 2rem;
+  padding-top: 3rem ;
 }
 
 .services-section h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 0.5em;
+  color: hsl(0, 0%, 100%);
+  text-shadow: #333;
 }
 
 .services-section h2 {
   font-size: 1.5em;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 2em;
 }
 
@@ -93,7 +102,8 @@ form {
   gap: 0.5rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 8px;

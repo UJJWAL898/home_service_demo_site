@@ -152,6 +152,7 @@ a:focus {
     display: flex;
     align-items: center;
     background: #ffffff;
+    z-index: 1;
 }
 
 .top-bar .logo {
@@ -229,6 +230,7 @@ a:focus {
 .nav-bar {
     position: relative;
     background: #01A9DD;
+    z-index: 1;
 }
 
 .nav-bar.nav-sticky {
@@ -515,7 +517,7 @@ a:focus {
 /*******************************/
 .page-header {
     position: relative;
-    margin-bottom: 45px;
+    /* margin-bottom: 45px; */
     padding: 90px 0;
     text-align: center;
     background: #202C45;
@@ -2077,6 +2079,8 @@ a:focus {
 }
 
 .gallery-item {
+    width: 350px;
+    height: 250px;
     margin-bottom: 30px;
     overflow: hidden;
     border-radius: 5px;
@@ -2086,7 +2090,7 @@ a:focus {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform 0.3s;
 }
