@@ -79,6 +79,10 @@ body {
   }
 }
 
+
+
+
+
 @media (max-width: 480px) {
   .banner_heading {
     font-size: 22px !important;  /* Further decrease font size for mobile */
