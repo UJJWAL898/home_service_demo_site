@@ -133,10 +133,21 @@
 const images = [
   "img/IMG-20250101-WA0023.jpg",
   "img/IMG-20250101-WA0025.jpg",
-  "https://source.unsplash.com/800x600/?home-repair",
-  "https://source.unsplash.com/800x600/?painting",
-  "https://source.unsplash.com/800x600/?plumbing",
-  "https://source.unsplash.com/800x600/?electrical",
+  "img/IMG-20250101-WA0026.jpg",
+  "img/IMG-20250101-WA0027.jpg",
+  "img/IMG-20250101-WA0028.jpg",
+  "img/IMG-20250101-WA0029.jpg",
+  "img/IMG-20250101-WA0030.jpg",
+  "img/IMG-20250101-WA0031.jpg",
+  "img/IMG-20250101-WA0033.jpg",
+  "img/IMG-20250101-WA0034.jpg",
+  "img/IMG-20250101-WA0035.jpg",
+  "img/IMG-20250101-WA0036.jpg",
+  "img/IMG-20250101-WA0037.jpg",
+  "img/IMG-20250101-WA0038.jpg",
+  "img/IMG-20250101-WA0039.jpg",
+
+  
 ];
 
 let currentSlide = 0;
