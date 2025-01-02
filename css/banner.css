@@ -1,0 +1,289 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main Banner Heading */
+.bannerHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Prevent text overflow */
+}
+
+.banner_heading {
+  font-size: 45px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 900;
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+  color: #333;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Show ellipsis if text overflows */
+  display: inline-block;
+  width: 100%; /* Ensure it doesn't exceed the container's width */
+}
+
+/* Line and Cursor for Animation */
+.line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #333;
+  animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive Styling for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .banner_heading {
+    font-size: 30px !important;  /* Adjust font size for tablets */
+    text-align: center;  /* Center text for small screens */
+    white-space: normal;  /* Allow text to wrap on smaller screens */
+    overflow: hidden;  /* Prevent text overflow */
+    width: 100%; /* Ensure no overflow */
+  }
+
+  .bannerHeading {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .line .cursor {
+    width: 1px;  /* Reduce cursor width for smaller devices */
+    height: 1.2em;  /* Keep cursor height consistent */
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  .banner_heading {
+    font-size: 22px !important;  /* Further decrease font size for mobile */
+    text-align: center;  /* Center text */
+    padding: 0 0px;  /* Add padding for better spacing */
+    white-space: normal;  /* Allow text to wrap */
+    overflow: hidden;  /* Ensure no overflow */
+  }
+
+  .bannerHeading {
+    height: auto;  /* Auto height for very small screens */
+    padding: 10px; /* Padding for better spacing */
+  }
+
+  .line .cursor {
+    width: 1px;  /* Reduce cursor width for smaller devices */
+    height: 1.2em;  /* Keep cursor height consistent */
+  }
+}
+
+/* Banner Section */
+.banner-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  height: auto; /* Ensure it adjusts based on content */
+  max-width: 100%;
+  margin: 0 auto 2rem; /* Add bottom margin to avoid overlap */
+  padding: 2rem;
+  gap: 2rem;
+  background-image: url("/img/bannerbg.jpg"); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay */
+  z-index: 0;
+}
+
+.banner-container > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above overlay */
+}
+
+/* Services Section */
+.services-section {
+  flex: 1;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.services-section h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 2px 4px #333;
+}
+
+.services-section h2 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 2em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+}
+
+.service-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* Fix width */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  max-width: 450px;
+}
+
+.form-container {
+  background: rgb(228, 227, 227);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 60px;
+  resize: vertical;
+}
+
+.recaptcha {
+  margin: 0.2rem 0;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .banner-container {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 1rem;
+  }
+
+  .services-section {
+    padding: 1rem 0;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-container {
+    padding: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+
+  .form-section {
+    margin-top: 1.5rem;
+  }
+}
