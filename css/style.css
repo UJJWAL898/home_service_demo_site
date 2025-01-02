@@ -714,18 +714,12 @@ a:focus {
     padding: 45px 0 0 0;
 }
 
-.service .service-items-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-    gap: 30px; /* Adjust the gap between items */
-}
-
 .service .service-item {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 45px;
+    margin-bottom: 30px; /* Adjusted margin to give some space between items */
 }
 
 .service .service-item i {
@@ -755,6 +749,34 @@ a:focus {
 .service .service-item p {
     margin: 0;
 }
+
+/* Ensure 3 items per column and 3 columns per row */
+@media (min-width: 768px) {
+    .service .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px; /* Space between items */
+    }
+
+    .service .col-lg-4, .service .col-md-4 {
+        width: 33.3333%; /* 3 columns per row */
+    }
+}
+
+/* For smaller screens, keep items stacked */
+@media (max-width: 768px) {
+    .service .col-md-6 {
+        width: 50%; /* Two items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .service .col-md-6 {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
+
 
 
 /*******************************/
@@ -935,11 +957,15 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0;
+    text-align: center; /* Centering the content */
 }
 
 .location .location-item {
     display: flex;
+    width: 300px;
     margin-bottom: 30px;
+    margin-left: 180px;
+    justify-content: space-around; /* Centering the location item */
 }
 
 .location .location-item i {
@@ -970,6 +996,7 @@ a:focus {
     padding: 45px 30px;
     background: #E8B736;
     border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adding some shadow to the form */
 }
 
 .location .location-form h3 {
@@ -1025,6 +1052,7 @@ a:focus {
         box-shadow: inset 650px 0 0 0 #202C45;
     }
 }
+
 
 
 /*******************************/
@@ -2062,6 +2090,15 @@ a:focus {
 .footer .copyright p a:hover {
     color: #ffffff;
 }
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-decoration: none; /* This removes the underline */
+    transition: .3s;
+}
+
+
 /* Gallery Preview Section */
 .gallery-preview {
     padding: 50px 0;
