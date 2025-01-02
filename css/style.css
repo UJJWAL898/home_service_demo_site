@@ -714,6 +714,12 @@ a:focus {
     padding: 45px 0 0 0;
 }
 
+.service .service-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 30px; /* Adjust the gap between items */
+}
+
 .service .service-item {
     position: relative;
     width: 100%;

@@ -7,9 +7,10 @@
   gap: 2rem;
   background-image: url("/img/bannerbg.jpg"); /* Replace with your actual image URL */
   background-size: cover;
-  background-position: absolute;
+  background-position: center; /* Fix: Center the background */
   background-repeat: no-repeat;
   color: #ffffff;
+  position: relative; /* Fix: Ensure ::before overlays correctly */
 }
 
 .banner-container::before {
@@ -19,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
   z-index: 0;
 }
 
@@ -32,14 +33,14 @@
 .services-section {
   flex: 1;
   padding-right: 2rem;
-  padding-top: 2rem ;
+  padding-top: 2rem;
 }
 
 .services-section h1 {
   font-size: 2.2em;
   margin-bottom: 0.5em;
   color: hsl(0, 0%, 100%);
-  text-shadow: #333;
+  text-shadow: 2px 2px 4px #333; /* Fix: Added offset and blur */
 }
 
 .services-section h2 {
@@ -59,12 +60,13 @@
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .service-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Fix: Add shadow for hover */
 }
 
 .service-item img {
